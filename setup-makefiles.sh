@@ -1,6 +1,7 @@
 #!/bin/bash
 #
-# Copyright (C) 2018 The LineageOS Project
+# Copyright (C) 2016 The CyanogenMod Project
+# Copyright (C) 2017-2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,9 +18,32 @@
 
 set -e
 
-export DEVICE=17061
-export VENDOR=Oppo
+DEVICE=CPH1861
+VENDOR=oppo
 
-export DEVICE_BRINGUP_YEAR=2019
+INITIAL_COPYRIGHT_YEAR=2018
 
-./../../$VENDOR/$DEVICE_COMMON/setup-makefiles.sh $@
+# Load extract_utils and do some sanity checks
+MY_DIR="${BASH_SOURCE%/*}"
+if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
+
+LINEAGE_ROOT="$MY_DIR"/../../..
+
+HELPER="$LINEAGE_ROOT"/vendor/lineage/build/tools/extract_utils.sh
+if [ ! -f "$HELPER" ]; then
+    echo "Unable to find helper script at $HELPER"
+    exit 1
+fi
+. "$HELPER"
+
+# Initialize the helper
+setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT"
+
+# Copyright headers and guards
+write_headers
+
+# The standard blobs
+write_makefiles "$MY_DIR"/proprietary-files.txt true
+
+# We are done!
+write_footers
