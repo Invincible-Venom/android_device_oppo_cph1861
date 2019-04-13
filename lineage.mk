@@ -21,8 +21,16 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-# Device
-$(call inherit-product, device/oppo/17061/device.mk)
+# Inherit device configuration
+$(call inherit-product, device/oppo/CPH1861/device.mk)
+
+# Screen density
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+
+# Bootanimation
+TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_HEIGHT := 2160
 
 # A/B updater
 AB_OTA_UPDATER := true
@@ -44,14 +52,19 @@ PRODUCT_PACKAGES += \
     update_verifier
 
 # Device identifiers
-PRODUCT_DEVICE := 17061
-PRODUCT_NAME := lineage_17061
+PRODUCT_DEVICE := CPH1861
+PRODUCT_NAME := lineage_CPH1861
 PRODUCT_BRAND := oppo
 PRODUCT_MODEL := Oppo Realme 1
 PRODUCT_MANUFACTURER := Oppo
-PRODUCT_RELEASE_NAME := 17061
+
+TARGET_VENDOR := oppo
+TARGET_VENDOR_PRODUCT_NAME := CPH1861
+TARGET_VENDOR_DEVICE_NAME := CPH1861
+
+PRODUCT_GMS_CLIENTID_BASE := android-oppo
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-        PRODUCT_NAME=17061
+        PRODUCT_NAME=CPH1861
 
 BUILD_FINGERPRINT := full_oppo6771_17061-user 8.1.0 O11019 1550589611 release-keys
