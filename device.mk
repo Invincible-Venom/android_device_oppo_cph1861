@@ -8,7 +8,7 @@
 #
 
 # Vendor blobs
-$(call inherit-product-if-exists, vendor/oppo/17061/17061-vendor.mk)
+$(call inherit-product-if-exists, vendor/oppo/CPH1861/CPH1861-vendor.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
