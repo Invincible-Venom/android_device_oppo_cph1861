@@ -39,7 +39,7 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     init.oppo.rc \
     init.oppo.reserve.rc \
-    fstab.6771 \
+
 
 # HIDL
 
