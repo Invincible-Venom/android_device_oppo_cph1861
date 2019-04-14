@@ -17,7 +17,7 @@
 
 set -e
 
-export DEVICE=17061
+export DEVICE=CPH1861
 export VENDOR=oppo
 
 export DEVICE_BRINGUP_YEAR=2019
