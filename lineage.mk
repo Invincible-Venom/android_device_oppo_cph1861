@@ -18,9 +18,6 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-
-
-
 # Inherit device configuration
 $(call inherit-product, device/oppo/CPH1861/device.mk)
 
@@ -44,7 +41,6 @@ TARGET_VENDOR_PRODUCT_NAME := CPH1861
 TARGET_VENDOR_DEVICE_NAME := CPH1861
 
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
-
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="full_oppo6771_17061-user 8.1.0 O11019 1550589611 release-keys" \
