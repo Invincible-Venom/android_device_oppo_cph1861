@@ -29,7 +29,6 @@ TARGET_SCREEN_HEIGHT := 2160
 TARGET_SCREEN_WIDTH := 1080
 
 # Camera
-
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.HAL3.enabled=1 \
     persist.camera.eis.enabled=1
@@ -40,9 +39,7 @@ PRODUCT_PACKAGES += \
     init.oppo.rc \
     init.oppo.reserve.rc \
 
-
 # HIDL
-
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.manager@1.0
@@ -61,13 +58,6 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 ifneq ($(findstring lineage, $(TARGET_PRODUCT)),)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
 endif
-
-
-
-
-
-
-
 
 # USB
 PRODUCT_PROPERTY_OVERRIDES += \
