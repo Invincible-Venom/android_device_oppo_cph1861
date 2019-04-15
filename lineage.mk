@@ -19,7 +19,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+
 
 # Inherit device configuration
 $(call inherit-product, device/oppo/CPH1861/device.mk)
