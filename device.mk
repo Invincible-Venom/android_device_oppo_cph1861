@@ -62,12 +62,12 @@ ifneq ($(findstring lineage, $(TARGET_PRODUCT)),)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
 endif
 
-# Telephony
-PRODUCT_PACKAGES += \
-    telephony-ext
 
-PRODUCT_BOOT_JARS += \
-    telephony-ext
+
+
+
+
+
 
 # USB
 PRODUCT_PROPERTY_OVERRIDES += \
