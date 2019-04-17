@@ -43,10 +43,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/mtk-kpd.kl:system/usr/keylayout/mtk-kpd.kl
 	
-# Misc
-PRODUCT_COPY_FILES += \
-$(LOCAL_PATH)/configs/empty:system/etc/empty
-
 # Telephony
 PRODUCT_PACKAGES += \
     telephony-ext
