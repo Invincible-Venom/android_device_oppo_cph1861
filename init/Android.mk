@@ -22,7 +22,7 @@ include $(CLEAR_VARS)
 LOCAL_C_INCLUDES := \
     system/core/base/include \
     system/core/init
-LOCAL_MODULE := libinit_CPH1861
+LOCAL_MODULE := init_CPH1861
 LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES := init_CPH1861.cpp
 

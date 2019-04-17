@@ -28,11 +28,6 @@ PRODUCT_COPY_FILES += \
 TARGET_SCREEN_HEIGHT := 2160
 TARGET_SCREEN_WIDTH := 1080
 
-# Camera
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.camera.HAL3.enabled=1 \
-    persist.camera.eis.enabled=1
-
 # Device init scripts
 PRODUCT_PACKAGES += \
     init.target.rc \
@@ -47,6 +42,17 @@ PRODUCT_PACKAGES += \
 # Input
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/mtk-kpd.kl:system/usr/keylayout/mtk-kpd.kl
+	
+# Misc
+PRODUCT_COPY_FILES += \
+$(LOCAL_PATH)/configs/empty:system/etc/empty
+
+# Telephony
+PRODUCT_PACKAGES += \
+    telephony-ext
+
+PRODUCT_BOOT_JARS += \
+telephony-ext
 
 # Net
 PRODUCT_PACKAGES += \
