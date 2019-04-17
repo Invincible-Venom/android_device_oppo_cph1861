@@ -48,13 +48,10 @@ TARGET_NO_BOOTLOADER := true
 
 # Dexpreopt
 ifeq ($(HOST_OS),linux)
-  ifneq ($(TARGET_BUILD_VARIANT),userdebug)
+  ifneq ($(TARGET_BUILD_VARIANT),$var)
     WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := false
   endif
 endif
-
-# Treble
-PRODUCT_SHIPPING_API_LEVEL := 27
 
 # Enable 64-bits binder
 TARGET_USES_64_BIT_BINDER := true
