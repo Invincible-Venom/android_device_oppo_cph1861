@@ -51,7 +51,7 @@ ifeq ($(HOST_OS),linux)
   ifneq ($(TARGET_BUILD_VARIANT),userdebug)
     WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := false
   endif
-endi
+endif
 
 # Treble
 PRODUCT_SHIPPING_API_LEVEL := 27
