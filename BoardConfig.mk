@@ -46,13 +46,6 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 TARGET_BOOTLOADER_BOARD_NAME := oppo6771_17061
 TARGET_NO_BOOTLOADER := true
 
-# Dexpreopt
-ifeq ($(HOST_OS),linux)
-  ifneq ($(TARGET_BUILD_VARIANT),$var)
-    WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := false
-  endif
-endif
-
 # Enable 64-bits binder
 TARGET_USES_64_BIT_BINDER := true
 
