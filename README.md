@@ -24,5 +24,4 @@ Release Date | May, 2018
 
 ![Realme 1 (17061)](https://i.gadgets360cdn.com/products/large/1532074799_635_Realme_1_db_normal_ndtv.jpg "Realme 1")
 
-This device tree can be used to build LineageOS for Oppo Realme 1.
 
