@@ -14,10 +14,6 @@
 # limitations under the License.
 #
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-
 # Inherit device configuration
 $(call inherit-product, device/oppo/CPH1861/device.mk)
 
