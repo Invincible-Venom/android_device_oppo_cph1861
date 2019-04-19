@@ -72,10 +72,16 @@ BOARD_FLASH_BLOCK_SIZE := 16384
 
 TARGET_COPY_OUT_VENDOR := vendor
 
+# MTK Hardware
+BOARD_HAS_MTK_HARDWARE := true
+
 # Platform
 TARGET_BOARD_PLATFORM_GPU := Mali G72 MP3 
 
 # Properties
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
+
+# Seccomp filter
+BOARD_SECCOMP_POLICY := $(LOCAL_PATH)/seccomp_policy
 
 # TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
