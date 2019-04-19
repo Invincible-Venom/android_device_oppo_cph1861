@@ -50,9 +50,6 @@ ifneq ($(findstring lineage, $(TARGET_PRODUCT)),)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
 endif
 
-# Misc
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0 
-
 # USB
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp,adb
