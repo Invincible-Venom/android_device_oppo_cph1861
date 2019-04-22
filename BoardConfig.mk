@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -71,7 +71,7 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 TARGET_KERNEL_SOURCE := kernel/oppo/CPH1861
-TARGET_KERNEL_CONFIG := oppo6771_17065_defconfig
+TARGET_KERNEL_CONFIG := oppo6771_17061_defconfig
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 32768
