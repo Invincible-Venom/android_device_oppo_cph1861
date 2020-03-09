@@ -1,26 +1,25 @@
-Device Tree for Realme 1
-===========================================
+# Device Tree for Oppo Realme
+Oppo Realme 1
 
+### Spec Sheet
+Feature | Specification
+-------:|:------------------------- 
+CPU | 2.0GHz Octa-Core MT6771 (Helio P60) 
+GPU | Mali G72-MP3
+Model | CPH1861
+Codename | CPH1861
+Memory | 3GB/4GB/6GB RAM
+Shipped Android Version | 8.1 (Upgradable to 9.0)
+Storage | 32/64/128 GB
+Battery | 3410 mAh 
+Display | 6.0" 1080 x 2160 px 
+Camera | 13MP  
+Front Camera | 8MP
+Dimensions | 156.5 x 75.2 x 7.8 mm
+Release Date | May, 2018
  
-## Device specifications
+---
 
-Basic   | Spec Sheet
--------:|:-------------------------
-OS	| Android 8.1 (Oreo), upgradable to Android 9.0 (Pie)	
-CPU     | Octa-core (4x2.0 GHz Cortex-A73 & 4x2.0 GHz Cortex-A53)
-Chipset | Mediatek MT6771 Helio P60
-GPU     | Mali-G72 MP3
-Memory  | 3GB/4GB/6GB RAM
-Storage | 32GB/64GB/128GB
-MicroSD | up to 256 GB (dedicated slot)
-Battery | Non-removable Li-Ion 3410 mAh battery
-Resolution | 1080 x 2160 pixels, 18:9 ratio (~402 ppi density)
-Camera (Rear)  | 13 MP, f/2.2, PDAF
-Rear Camera Features | LED flash, HDR, panorama
-Video	| 1080p@30fps	
-Camera (Front)  | 8 MP, f/2.2
-Features| Accelerometer, gyro, proximity, compass	
+## Device Picture
 
-## Device picture
-
-![Realme 1](https://images-na.ssl-images-amazon.com/images/I/61lb8GlUZ6L._SL1000_.jpg "Realme 1")
+![Realme 1 (17061)](https://i.gadgets360cdn.com/products/large/1532074799_635_Realme_1_db_normal_ndtv.jpg "Realme 1")
