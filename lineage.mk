@@ -1,5 +1,6 @@
 #
-# Copyright (C) 2017 The LineageOS Open Source Project
+# Copyright 2019 The Android Open Source Project
+# Copyright (C) 2019 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,33 +15,7 @@
 # limitations under the License.
 #
 
-# Inherit device configuration
-$(call inherit-product, device/oppo/CPH1861/device.mk)
-
-# Screen density
-PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
-
-# Bootanimation
-TARGET_SCREEN_WIDTH := 1080
-TARGET_SCREEN_HEIGHT := 2160
-
-# Device identifiers
-PRODUCT_DEVICE := CPH1861
-PRODUCT_NAME := lineage_CPH1861
-PRODUCT_BRAND := oppo
-PRODUCT_MODEL := Oppo Realme 1
-PRODUCT_MANUFACTURER := Oppo
-
-TARGET_VENDOR := oppo
-TARGET_VENDOR_PRODUCT_NAME := CPH1861
-TARGET_VENDOR_DEVICE_NAME := CPH1861
-
-PRODUCT_GMS_CLIENTID_BASE := android-oppo
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="full_oppo6771_17061-user 8.1.0 O11019 1550589611 release-keys" \
-    PRODUCT_NAME="CPH1861" \
-    TARGET_DEVICE="CPH1861"
-	
-BUILD_FINGERPRINT := oppo/CPH1861/CPH1861:8.1.0/O11019/1550589611:user/release-keys
+# Release name
+PRODUCT_RELEASE_NAME := CPH1861
+PRODUCT_DEFAULT_LANGUAGE := en
+PRODUCT_DEFAULT_REGION   := US

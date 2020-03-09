@@ -1,0 +1,41 @@
+on init
+    setprop sys.usb.configfs 1
+    setprop sys.usb.ffs.aio_compat 1
+    setprop persist.adb.nonblocking_ffs 0
+    setprop ro.adb.nonblocking_ffs 0
+    setprop persist.sys.usb.config mtp,adb
+
+    # Force disable all VoLTE support -- it requires intensive modification of frameworks
+    # without framework support it creates all sorts of problems. Disable it.
+    setprop persist.vendor.mtk.volte.enable 0
+    setprop persist.vendor.mtk_ct_volte_support 0
+    setprop init.svc.volte_imsm_93 0
+    setprop init.svc.vendor.volte_imcb 0
+    setprop init.svc.vendor.volte_stack 0
+    setprop init.svc.vendor.volte_ua 0
+    setprop persist.vendor.mtk.volte.enable 0
+    setprop persist.vendor.radio.volte_state 0
+    setprop persist.vendor.volte_support 0
+    setprop vendor.net.ims.volte.pid 0
+
+    # Custom overrides that need to happen right on boot
+    # Override vendor fstab
+    # We only need it to be overridden before things are mounted
+    mount none /system/etc/fstab.mt6771 /vendor/etc/fstab.mt6771 bind
+
+
+service logger /system/bin/logcat -b all -D -f /cache/boot_log.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
+on post-fs-data
+    # Clear existing log and start the service
+    rm /cache/boot_log.txt
+    start logger
+
+on property:sys.boot_completed=1
+    # Stop the logger service
+    stop logger
