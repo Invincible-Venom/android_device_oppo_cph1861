@@ -16,7 +16,7 @@
 #
 
 #
-# System Properties for Realme 1: CPH1861
+# System Properties for Realme 1: CPH1859
 #
 
 # LCD density

@@ -16,7 +16,7 @@
 #
 
 # mt6771 platform boardconfig
-DEVICE_PATH := device/oppo/CPH1861
+DEVICE_PATH := device/oppo/CPH1859
 
 BOARD_VENDOR := oppo
 

@@ -124,4 +124,4 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf
         
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/oppo/CPH1861/CPH1861-vendor.mk)
+$(call inherit-product, vendor/oppo/CPH1859/CPH1859-vendor.mk)
