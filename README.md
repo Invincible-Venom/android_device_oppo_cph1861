@@ -1,6 +1,6 @@
-# Device Tree for Oppo Realme
-Oppo Realme 1
-The 3GB varian thas codename CPH1861 whereas the 4/6GB variants have codename CPH1859.
+# Device Tree for Oppo Realme 1
+The 3GB variant has codename CPH1861 whereas the 4/6GB variants have codename CPH1859.
+
 ### Spec Sheet
 Feature | Specification
 -------:|:------------------------- 
