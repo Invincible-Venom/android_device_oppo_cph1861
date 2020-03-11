@@ -6,8 +6,8 @@ Feature | Specification
 -------:|:------------------------- 
 CPU | 2.0GHz Octa-Core MT6771 (Helio P60) 
 GPU | Mali G72-MP3
-Model | CPH1861
-Codename | CPH1861
+Model | CPH1859/61 
+Codename | CPH1859/61
 Memory | 3GB/4GB/6GB RAM
 Shipped Android Version | 8.1 (Upgradable to 9.0)
 Storage | 32/64/128 GB
