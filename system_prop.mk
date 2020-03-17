@@ -25,7 +25,7 @@ ro.sf.lcd_density=480
 # MediaTek
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 ro.mediatek.chip_ver=S01 \
-ro.mediatek.version.release=CPH1859_11_C.43_190818 \
+ro.mediatek.version.release=CPH1859_11_C.47_200215\
 ro.mediatek.platform=MT6771 \
 ro.mediatek.version.branch=alps-mp-p0.mp3.tc16sp \
 ro.mediatek.wlan.p2p=1 \
