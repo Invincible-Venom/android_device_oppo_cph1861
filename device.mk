@@ -122,6 +122,14 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.wifi.supplicant@2.1 \
     wpa_supplicant \
     wpa_supplicant.conf
+
+# Telephony
+PRODUCT_PACKAGES += \
+    telephony-ext \
+    mtk-telephony-ext
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext    
         
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/oppo/CPH1859/CPH1859-vendor.mk)
