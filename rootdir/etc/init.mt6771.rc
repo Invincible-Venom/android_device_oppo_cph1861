@@ -39,3 +39,5 @@ on post-fs-data
 on property:sys.boot_completed=1
     # Stop the logger service
     stop logger
+
+write /sys/devices/platform/odm/odm:oppo_charger/power_supply/usb/otg_switch 1
