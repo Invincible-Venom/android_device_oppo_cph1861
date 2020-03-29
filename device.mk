@@ -130,6 +130,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     telephony-ext    
+
+DEVICE_PACKAGE_OVERLAYS += \
+    vendor/mediatek/hardware/telephony-ext/overlay
         
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/oppo/CPH1859/CPH1859-vendor.mk)
