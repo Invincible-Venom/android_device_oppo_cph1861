@@ -44,6 +44,9 @@ DEVICE_PACKAGE_OVERLAYS += \
 # Overlay from mtk-telephony-ext
 include vendor/mediatek/hardware/telephony-ext/overlay.mk
 
+# A/B
+AB_OTA_UPDATER := false
+
 # Keyboard layout
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/ACCDET.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/ACCDET.kl \
@@ -58,6 +61,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/permissions/com.mediatek.ims.plugin.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.mediatek.ims.plugin.xml \
     $(LOCAL_PATH)/permissions/privapp-permissions-mediatek.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mediatek.xml
+    frameworks/native/data/etc/android.software.secure_lock_screen.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.software.secure_lock_screen.xml
     
 # Misc
 PRODUCT_COPY_FILES += \
@@ -68,8 +72,8 @@ PRODUCT_COPY_FILES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    fstab.mt6771 \
-    init.mt6771.rc
+    fstab.mt6771 
+    init.mt6771.rc \
 
 # DRM
 PRODUCT_PACKAGES += \
