@@ -18,7 +18,7 @@
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default
-    
+	
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml
     
@@ -37,10 +37,12 @@ PRODUCT_PACKAGES += \
     memtrack.mt6771
        
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-ifneq ($(findstring lineage, $(TARGET_PRODUCT)),)
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
-endif
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay \
+    $(LOCAL_PATH)/overlay-lineage
+
+# Overlay from mtk-telephony-ext
+include vendor/mediatek/hardware/telephony-ext/overlay.mk
 
 # Keyboard layout
 PRODUCT_COPY_FILES += \
