@@ -42,9 +42,6 @@ ifneq ($(findstring lineage, $(TARGET_PRODUCT)),)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
 endif
 
-# Overlay from mtk-telephony-ext
-include vendor/mediatek/hardware/telephony-ext/overlay.mk
-
 # A/B
 AB_OTA_UPDATER := false
 
