@@ -69,8 +69,8 @@ PRODUCT_COPY_FILES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    fstab.mt6771 
-    init.mt6771.rc \
+    fstab.mt6771 \
+    init.mt6771.rc 
 
 # DRM
 PRODUCT_PACKAGES += \
