@@ -37,9 +37,10 @@ PRODUCT_PACKAGES += \
     memtrack.mt6771
        
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+ifneq ($(findstring lineage, $(TARGET_PRODUCT)),)
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
+endif
 
 # Overlay from mtk-telephony-ext
 include vendor/mediatek/hardware/telephony-ext/overlay.mk
@@ -61,7 +62,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/permissions/com.mediatek.ims.plugin.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.mediatek.ims.plugin.xml \
     $(LOCAL_PATH)/permissions/privapp-permissions-mediatek.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mediatek.xml
-    frameworks/native/data/etc/android.software.secure_lock_screen.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.software.secure_lock_screen.xml
     
 # Misc
 PRODUCT_COPY_FILES += \
@@ -137,8 +137,5 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext    
 
-DEVICE_PACKAGE_OVERLAYS += \
-    vendor/mediatek/hardware/telephony-ext/overlay
-        
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/oppo/CPH1859/CPH1859-vendor.mk)
