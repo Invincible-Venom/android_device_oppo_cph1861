@@ -34,7 +34,7 @@ PRODUCT_PACKAGES += \
     hwcomposer.mt6771 \
     libhwc2on1adapter \
     libhwc2onfbadapter \
-    memtrack.mt6771
+    memtrack.mt6771 \
        
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
