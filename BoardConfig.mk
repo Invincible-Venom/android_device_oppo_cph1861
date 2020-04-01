@@ -50,12 +50,6 @@ TARGET_CPU_ABI_LIST := arm64-v8a,armeabi-v7a,armeabi
 TARGET_CPU_ABI_LIST_64_BIT := arm64-v8a
 TARGET_CPU_ABI_LIST_32_BIT := armeabi-v7a,armeabi
 
-ENABLE_CPUSETS := true
-ENABLE_SCHEDBOOST := true
-
-# Avb
-# BOARD_AVB_ENABLE := true
-
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := mt6771
 TARGET_NO_BOOTLOADER := true
@@ -94,7 +88,6 @@ TARGET_USES_MKE2FS := true
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.mt6771
-BOARD_HAS_LARGE_FILESYSTEM := true
 
 # System Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system_prop.mk
@@ -107,9 +100,3 @@ TARGET_ENABLE_MEDIADRM_64 := true
 
 #DT2W
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
-
-# Soong
-PRODUCT_SOONG_NAMESPACES += vendor/oppo/CPH1859
-
-# Treble
-BOARD_VNDK_VERSION := current
