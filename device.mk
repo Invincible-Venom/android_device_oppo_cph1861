@@ -62,8 +62,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/misc/clatd.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/clatd.conf \
     $(LOCAL_PATH)/misc/factory.ini:$(TARGET_COPY_OUT_SYSTEM)/etc/factory.ini \
     $(LOCAL_PATH)/misc/custom.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/custom.conf \
-    $(LOCAL_PATH)/misc/clatd.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/clatd.conf \
-
+    
 # Init
 PRODUCT_PACKAGES += \
     fstab.mt6771 \
@@ -75,12 +74,29 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-service \
     android.hardware.drm@1.1-service.clearkey \
     android.hardware.drm@1.1-service.widevine
+    
+# Radio
+PRODUCT_PACKAGES += \
+    android.hardware.radio@1.2 \
+    android.hardware.radio.config@1.0 \
+    android.hardware.secure_element@1.0 \
+    libprotobuf-cpp-full \
+    libxml2
 
+# RenderScript
+PRODUCT_PACKAGES += \
+    android.hardware.renderscript@1.0-impl
+    
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl-mediatek \
     Snap
 
+# Seccomp
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/seccomp/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
+    $(LOCAL_PATH)/seccomp/mediaextractor.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy
+    
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.0-service \
@@ -94,6 +110,10 @@ PRODUCT_PACKAGES += \
 # Power
 PRODUCT_PACKAGES += \
     power.mt6771
+    
+# Public Libraries
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
 # Vibrator
 PRODUCT_PACKAGES += \
@@ -109,6 +129,10 @@ PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
     android.hardware.thermal@1.0-service \
     thermal.mt6771
+    
+# VNDK-SP
+PRODUCT_PACKAGES += \
+    vndk-sp
 
 #WiFi
 PRODUCT_PACKAGES += \
