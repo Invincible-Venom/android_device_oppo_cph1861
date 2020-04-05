@@ -32,6 +32,6 @@ def AddTrustZoneAssertion(info, input_zip):
   if m:
     versions = m.group(1).split('|')
     if len(versions) and '*' not in versions:
-      cmd = 'assert(CPH1859.verify_trustzone(' + ','.join(['"%s"' % tz for tz in versions]) + ') == "1");'
+      cmd = 'assert(CPH1859,CPH1861.verify_trustzone(' + ','.join(['"%s"' % tz for tz in versions]) + ') == "1");'
       info.script.AppendExtra(cmd)
   return
