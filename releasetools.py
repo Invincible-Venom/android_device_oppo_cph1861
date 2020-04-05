@@ -25,13 +25,3 @@ def FullOTA_Assertions(info):
 def IncrementalOTA_Assertions(info):
   AddTrustZoneAssertion(info, info.target_zip)
   return
-
-def AddTrustZoneAssertion(info, input_zip):
-  android_info = info.input_zip.read("OTA/android-info.txt")
-  m = re.search(r'require\s+version-trustzone\s*=\s*(\S+)', android_info)
-  if m:
-    versions = m.group(1).split('|')
-    if len(versions) and '*' not in versions:
-      cmd = 'assert(CPH1859,CPH1861.verify_trustzone(' + ','.join(['"%s"' % tz for tz in versions]) + ') == "1");'
-      info.script.AppendExtra(cmd)
-  return
