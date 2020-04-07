@@ -33,10 +33,6 @@ def FullOTA_InstallEnd(info):
   info.script.Mount("/system")
   info.script.Mount("/vendor")
   info.script.Mount("/persist")
-  RunCustomScript(info, "device_check.sh", "")
-  info.script.Unmount("/system")
-  info.script.Unmount("/vendor")
-  info.script.Unmount("/persist")
   return
 
 def RunCustomScript(info, name, arg):
