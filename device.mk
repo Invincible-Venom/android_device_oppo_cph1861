@@ -130,10 +130,6 @@ PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-service \
     thermal.mt6771
     
-# VNDK-SP
-PRODUCT_PACKAGES += \
-    vndk-sp
-
 #WiFi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service-mediatek \
