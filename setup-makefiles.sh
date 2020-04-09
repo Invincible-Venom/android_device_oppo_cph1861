@@ -32,16 +32,16 @@ if [ ! -f "$HELPER" ]; then
     echo "Unable to find helper script at $HELPER"
     exit 1
 fi
-. "$HELPER"
+source "${HELPER}"
 
-# Initialize the helper
-setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT"
+# Initialize the helper for common
+setup_vendor "${DEVICE}" "${VENDOR}" "${LINEAGE_ROOT}" true
 
 # Copyright headers and guards
-write_headers
+write_headers "${DEVICE}"
 
-# The standard blobs
-write_makefiles "$MY_DIR"/proprietary-files.txt true
+# The standard common blobs
+write_makefiles "${MY_DIR}/proprietary-files.txt" true
 
-# We are done!
+# Finish
 write_footers
