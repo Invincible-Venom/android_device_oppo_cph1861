@@ -28,10 +28,15 @@ $(call inherit-product, device/oppo/CPH1859/device.mk)
 # Define first api level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
+# Screen density
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+
 # Bootanimation
 TARGET_SCREEN_WIDTH := 1080
 TARGET_SCREEN_HEIGHT := 2160
 
+## Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_CPH1859
 PRODUCT_DEVICE := CPH1859
 PRODUCT_MANUFACTURER := OPPO
