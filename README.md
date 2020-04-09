@@ -9,7 +9,7 @@ GPU | Mali G72-MP3
 Model | CPH1859/61 
 Codename | CPH1859/61
 Memory | 3GB/4GB/6GB RAM
-Shipped Android Version | 8.1 (Upgradable to 9.0)
+Shipped Android Version | 8.1 
 Storage | 32/64/128 GB
 Battery | 3410 mAh 
 Display | 6.0" 1080 x 2160 px 
