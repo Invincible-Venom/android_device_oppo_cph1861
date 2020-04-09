@@ -42,6 +42,9 @@ ifneq ($(findstring lineage, $(TARGET_PRODUCT)),)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
 endif
 
+# Properties
+-include $(DEVICE_PATH)/system_prop.mk
+
 # Keyboard layout
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/ACCDET.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/ACCDET.kl \
@@ -67,6 +70,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fstab.mt6771 \
     init.mt6771.rc 
+    init.mtk.rc
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -150,6 +154,14 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     telephony-ext    
+    
+# Net
+PRODUCT_PACKAGES += \
+    netutils-wrapper-1.0
+
+# Trust
+PRODUCT_PACKAGES += \
+    lineage.trust@1.0-service
 
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/oppo/CPH1859/CPH1859-vendor.mk)
