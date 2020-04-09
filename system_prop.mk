@@ -71,6 +71,11 @@ ro.sys.usb.storage.type=mtp,adb
 rild.libpath=mtk-ril.so
 rild.libargs=-d /dev/ttyC0
 vendor.ril.data.gsm_imsi0=405854004072403
+ril.read.imsi=1
+ro.vendor.mtk_ril_mode=c6m_1rild
+persist.vendor.radio.mtk_dsbp_support=1
+persist.vendor.radio.mtk_ps2_rat=L/W/G
+persist.vendor.radio.mtk_ps3_rat=G
 
 # WFD
 wfd.dummy.enable=1
@@ -94,3 +99,14 @@ ro.debuggable=1 \
 ro.allow.mock.location=1 \
 ro.adb.secure=0
 ro.secure=0
+
+# ADDITIONAL VENDOR DEFAULT PROPERTIES
+ro.vndk.version=28
+ro.zygote=zygote64_32
+ro.logd.size.stats=64K
+persist.service.acm.enable=0
+ro.mount.fs=EXT4
+ro.vendor.rc=/vendor/etc/init/hw/
+ro.oem_unlock_supported=1
+camera.disable_zsl_mode=1
+ro.logd.kernel=false
