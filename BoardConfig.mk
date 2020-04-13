@@ -59,13 +59,18 @@ BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 androidboot.configfs=true android
 BOARD_KERNEL_BASE := 0x40078000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x14f88000 --second_offset 0x00e88000 --tags_offset 0x13f88000
-BOARD_KERNEL_IMAGE_NAME := zImage
+BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/zImage
 TARGET_BOARD_SUFFIX := _64
 TARGET_USES_64_BIT_BINDER := true
 
 # Security patch level
 VENDOR_SECURITY_PATCH := 2020-02-05
+
+# HIDL
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
+DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/framework_compatibility_matrix.xml
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 33554432
@@ -105,3 +110,6 @@ TARGET_ENABLE_MEDIADRM_64 := true
 
 #DT2W
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
+
+# system.prop
+TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop

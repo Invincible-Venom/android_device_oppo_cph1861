@@ -26,15 +26,3 @@ def IncrementalOTA_Assertions(info):
   AddTrustZoneAssertion(info, info.target_zip)
   return
 
-def FullOTA_InstallEnd(info):
-  info.script.AppendExtra('ifelse(is_mounted("/system"), unmount("/system"));');
-  info.script.AppendExtra('ifelse(is_mounted("/vendor"), unmount("/vendor"));');
-  info.script.AppendExtra('ifelse(is_mounted("/persist"), unmount("/persist"));');
-  info.script.Mount("/system")
-  info.script.Mount("/vendor")
-  info.script.Mount("/persist")
-  return
-
-def RunCustomScript(info, name, arg):
-  info.script.AppendExtra(('run_program("/tmp/install/bin/%s", "%s");' % (name, arg)))
-  return
