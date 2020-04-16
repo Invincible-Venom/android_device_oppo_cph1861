@@ -113,7 +113,7 @@ ro.secure=0
 
 # ADDITIONAL VENDOR DEFAULT PROPERTIES
 ro.vndk.version=28
-ro.zygote=zygote64_32
+ro.zygote=zygote=64_32
 ro.logd.size.stats=64K
 persist.service.acm.enable=0
 ro.mount.fs=EXT4
