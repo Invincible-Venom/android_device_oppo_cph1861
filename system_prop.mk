@@ -76,9 +76,20 @@ ro.vendor.mtk_ril_mode=c6m_1rild
 persist.vendor.radio.mtk_dsbp_support=1
 persist.vendor.radio.mtk_ps2_rat=L/W/G
 persist.vendor.radio.mtk_ps3_rat=G
+ro.vendor.md_auto_setup_ims=1 \
+ril.read.imsi=1 \
+persist.vendor.vilte_support=1 \ 
+persist.vendor.viwifi_support=1 \ 
+persist.vendor.volte_support=1 \
 
 # WFD
 wfd.dummy.enable=1
+
+#Camera
+ro.vendor.camera3.zsl.default=140 \
+vendor.camera.mdp.cz.enable=1 \ 
+vendor.camera.mdp.dre.enable=1 \ 
+vendor.camera.mdp.hfg.enable=0 \
 
 #WiFi
 mediatek.wlan.chip=CONSYS_MT6771
