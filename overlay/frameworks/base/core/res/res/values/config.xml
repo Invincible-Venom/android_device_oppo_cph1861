@@ -39,17 +39,6 @@
         <item>350.8851</item>
         <item>430.98703</item>
     </array>
-    <array name="config_autoBrightnessKeyboardBacklightValues" />
-    <array name="config_autoBrightnessLcdBacklightValues" />
-    <integer-array name="config_autoBrightnessLevels">
-        <item>45</item>
-        <item>1025</item>
-        <item>1480</item>
-        <item>2250</item>
-        <item>3300</item>
-        <item>10000</item>
-    </integer-array>
-	
     <!-- Array of light sensor LUX values to define our levels for auto backlight brightness support.
          The N entries of this array define N + 1 control points as follows:
          (1-based arrays)
