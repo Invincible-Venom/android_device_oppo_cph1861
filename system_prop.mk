@@ -1,6 +1,6 @@
 #
-# Copyright 2019 The Android Open Source Project
-# Copyright (C) 2019 The LineageOS Project
+# Copyright 2020 The Android Open Source Project
+# Copyright (C) 2020 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -76,20 +76,20 @@ ro.vendor.mtk_ril_mode=c6m_1rild
 persist.vendor.radio.mtk_dsbp_support=1
 persist.vendor.radio.mtk_ps2_rat=L/W/G
 persist.vendor.radio.mtk_ps3_rat=G
-ro.vendor.md_auto_setup_ims=1 \
-ril.read.imsi=1 \
-persist.vendor.vilte_support=1 \ 
-persist.vendor.viwifi_support=1 \ 
-persist.vendor.volte_support=1 \
+ro.vendor.md_auto_setup_ims=1
+ril.read.imsi=1
+persist.vendor.vilte_support=1
+persist.vendor.viwifi_support=1
+persist.vendor.volte_support=1
 
 # WFD
 wfd.dummy.enable=1
 
 #Camera
-ro.vendor.camera3.zsl.default=140 \
-vendor.camera.mdp.cz.enable=1 \ 
-vendor.camera.mdp.dre.enable=1 \ 
-vendor.camera.mdp.hfg.enable=0 \
+ro.vendor.camera3.zsl.default=140
+vendor.camera.mdp.cz.enable=1 
+vendor.camera.mdp.dre.enable=1
+vendor.camera.mdp.hfg.enable=0
 
 #WiFi
 mediatek.wlan.chip=CONSYS_MT6771
@@ -108,7 +108,7 @@ persist.service.debuggable=1 \
 persist.sys.usb.config=mtp,adb \
 ro.debuggable=1 \
 ro.allow.mock.location=1 \
-ro.adb.secure=0
+ro.adb.secure=0 \
 ro.secure=0
 
 # ADDITIONAL VENDOR DEFAULT PROPERTIES

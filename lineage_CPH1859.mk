@@ -1,6 +1,6 @@
 #
-# Copyright 2019 The Android Open Source Project
-# Copyright (C) 2019 The LineageOS Project
+# Copyright 2020 The Android Open Source Project
+# Copyright (C) 2020 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -51,7 +51,7 @@ TARGET_VENDOR_DEVICE_NAME := CPH1859
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE="CPH1859" \
     PRODUCT_NAME="CPH1859" \
-    PRIVATE_BUILD_DESC="full_oppo6771_17065-user 9 PPR1.180610.011 eng.root.20200215.081652 release-keys"
+    PRIVATE_BUILD_DESC="full_oppo6771_17065-user 9 PPR1.180610.011 eng.root.20200321.060905 release-keys"
 
-BUILD_FINGERPRINT := "OPPO/CPH1859/CPH1859:9/PPR1.180610.011/1579589611:user/release-keys"
+BUILD_FINGERPRINT := "OPPO/CPH1859/CPH1859:9/PPR1.180610.011/1583736408:user/release-keys"
 
