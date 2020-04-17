@@ -106,6 +106,3 @@ TARGET_ENABLE_MEDIADRM_64 := true
 
 #DT2W
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
-
-# system.prop Note: Do we need 2nd one?
-#TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
