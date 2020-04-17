@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 **
-** Copyright 2009, The Android Open Source Project
+** Copyright 2020, The Android Open Source Project
 **
 ** Licensed under the Apache License, Version 2.0 (the "License")
 ** you may not use this file except in compliance with the License.
@@ -18,7 +18,7 @@
 -->
 
 <device name="Android">
-  <!-- Most values are the incremental current used by a feature,
+ <!-- Most values are the incremental current used by a feature,
        in mA (measured at nominal voltage).
        The default values are deliberately incorrect dummy values.
        OEM's must measure and provide actual values before
@@ -27,25 +27,25 @@
        are totally dependent on the platform and can vary
        significantly, so should be measured on the shipping platform
        with a power meter. -->
-    <item name="ambient.on">0.1</item>
-    <item name="screen.on">0.1</item>
-    <item name="screen.full">0.1</item>
-    <item name="bluetooth.active">0.1</item>
-    <item name="bluetooth.on">0.1</item>
-    <item name="wifi.on">0.1</item>
-    <item name="wifi.active">0.1</item>
-    <item name="wifi.scan">0.1</item>
-    <item name="audio">0.1</item>
-    <item name="video">0.1</item>
-    <item name="camera.flashlight">0.1</item>
-    <item name="camera.avg">0.1</item>
-    <item name="gps.on">0.1</item>
-    <item name="radio.active">0.1</item>
-    <item name="radio.scanning">0.1</item>
-    <array name="radio.on">
-        <value>0.2</value>
-        <value>0.1</value>
-    </array>
+   <item name="ambient.on">0.1</item>
+   <item name="screen.on">0.1</item>
+   <item name="screen.full">0.1</item>
+   <item name="bluetooth.active">0.1</item>
+   <item name="bluetooth.on">0.1</item>
+   <item name="wifi.on">0.1</item>
+   <item name="wifi.active">0.1</item>
+   <item name="wifi.scan">0.1</item>
+   <item name="audio">0.1</item>
+   <item name="video">0.1</item>
+   <item name="camera.flashlight">0.1</item>
+   <item name="camera.avg">0.1</item>
+   <item name="gps.on">0.1</item>
+   <item name="radio.active">0.1</item>
+   <item name="radio.scanning">0.1</item>
+   <array name="radio.on">
+      <value>0.2</value>
+      <value>0.1</value>
+    /array>
 
   <!-- Radio related values. For modems without energy reporting support in firmware, use
        radio.active, radio.scanning, and radio.on. -->
@@ -64,34 +64,34 @@
   <item name="modem.controller.rx">0</item>
   <item name="modem.controller.tx">0</item>
   <item name="modem.controller.voltage">0</item>
-   <array name="modem.controller.tx">
-        <value>0</value>
-        <value>0</value>
-        <value>0</value>
-        <value>0</value>
-        <value>0</value>
-    </array>
+  <array name="modem.controller.tx">
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+      <value>0</value>
+   </array>
   
-   <item name="modem.controller.voltage">0</item>
+  <item name="modem.controller.voltage">0</item>
     <array name="gps.signalqualitybased">
-        <value>0</value>
-        <value>0</value>
+      <value>0</value>
+      <value>0</value>
     </array>
-    <item name="gps.voltage">0</item>
+   <item name="gps.voltage">0</item>
 
   <!-- A list of heterogeneous CPU clusters, where the value for each cluster represents the
        number of CPU cores for that cluster.
 
        Ex:
        <array name="cpu.clusters.cores">
-         <value>4</value> // cluster 0 has cpu0, cpu1, cpu2, cpu3
-         <value>2</value> // cluster 1 has cpu4, cpu5
+       <value>4</value> // cluster 0 has cpu0, cpu1, cpu2, cpu3
+       <value>2</value> // cluster 1 has cpu4, cpu5
        </array> -->
   <array name="cpu.clusters.cores">
       <value>4</value> <!-- cluster 0 has cpu0 -->
   </array>
 
-    <!-- Different CPU speeds for cluster 0 as reported in
+  <!-- Different CPU speeds for cluster 0 as reported in
        /sys/devices/system/cpu/cpu0/cpufreq/stats/time_in_state.
 
        There must be one of these for each cluster, labeled:
@@ -182,7 +182,7 @@
   <!-- Memory bandwidth power values in mA at the rail. There must be one value
        for each bucket defined in the device tree. -->
   <array name="memory.bandwidths">
-    <value>22.7</value> <!-- mA for bucket: 100mb/s-1.5 GB/s memory bandwidth -->
+      <value>22.7</value> <!-- mA for bucket: 100mb/s-1.5 GB/s memory bandwidth -->
   </array>
 
   <!-- This is the battery capacity in mAh (measured at nominal voltage) -->
@@ -191,15 +191,19 @@
   <!-- Wifi related values. -->
   <!-- Idle Receive current for wifi radio in mA. 0 by default-->
   <item name="wifi.controller.idle">0</item>
+     
   <!-- Rx current for wifi radio in mA. 0 by default-->
   <item name="wifi.controller.rx">0</item>
+     
   <!-- Tx current for wifi radio in mA. 0 by default-->
   <item name="wifi.controller.tx">0</item>
+     
   <!-- Current at each of the wifi Tx levels in mA. The number of tx levels varies per device
        and is available only of wifi chipsets which support the tx level reporting. Use
         wifi.tx for other chipsets. none by default -->
   <array name="wifi.controller.tx_levels"> <!-- mA -->
   </array>
+     
   <!-- Operating volatage for wifi radio in mV. 0 by default-->
   <item name="wifi.controller.voltage">0</item>
   <array name="wifi.batchedscan"> <!-- mA -->
@@ -209,4 +213,5 @@
     <value>.2</value>    <!-- 513-4,096/hr -->
     <value>2</value>    <!-- 4097-/hr -->
   </array>
+     
 </device>
