@@ -98,7 +98,6 @@ PRODUCT_PACKAGES += \
     fstab.mt6771 \
     ueventd.qcom.rc
 
-    
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-impl \
