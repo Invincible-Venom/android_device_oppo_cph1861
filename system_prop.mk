@@ -78,9 +78,6 @@ persist.vendor.radio.mtk_ps2_rat=L/W/G
 persist.vendor.radio.mtk_ps3_rat=G
 ro.vendor.md_auto_setup_ims=1
 ril.read.imsi=1
-persist.vendor.vilte_support=1
-persist.vendor.viwifi_support=1
-persist.vendor.volte_support=1
 
 # WFD
 wfd.dummy.enable=1
@@ -110,14 +107,3 @@ ro.debuggable=1 \
 ro.allow.mock.location=1 \
 ro.adb.secure=0 \
 ro.secure=0
-
-# ADDITIONAL VENDOR DEFAULT PROPERTIES
-ro.vndk.version=28
-ro.zygote=zygote=64_32
-ro.logd.size.stats=64K
-persist.service.acm.enable=0
-ro.mount.fs=EXT4
-ro.vendor.rc=/vendor/etc/init/hw/
-ro.oem_unlock_supported=1
-camera.disable_zsl_mode=1
-ro.logd.kernel=false
