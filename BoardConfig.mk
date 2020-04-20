@@ -96,7 +96,7 @@ BOARD_VNDK_VERSION := current
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
 
-#DT2W
+# DT2W
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 
 # MTK Hardware
