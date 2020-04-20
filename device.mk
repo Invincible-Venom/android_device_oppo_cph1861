@@ -15,11 +15,6 @@
 # limitations under the License.
 #
 
-#GAPPS
-GAPPS_VARIANT := nano
-GAPPS_FORCE_MATCHING_DPI := true
-GAPPS_FORCE_PACKAGE_OVERRIDES := true
-
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default
@@ -196,5 +191,3 @@ PRODUCT_PACKAGES += \
 
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/oppo/CPH1859/CPH1859-vendor.mk)
-
-$(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
