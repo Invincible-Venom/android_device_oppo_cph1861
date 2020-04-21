@@ -62,10 +62,6 @@ TARGET_USES_64_BIT_BINDER := true
 # Security patch level
 VENDOR_SECURITY_PATCH := 2020-03-05
 
-# HIDL
-DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/framework_compatibility_matrix.xml
-
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 33554432
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67108864
@@ -98,6 +94,3 @@ TARGET_ENABLE_MEDIADRM_64 := true
 
 # DT2W
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
-
-# MTK Hardware
-BOARD_HAS_MTK_HARDWARE := true 

@@ -25,7 +25,7 @@ ro.sf.lcd_density=480
 # MediaTek
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 ro.mediatek.chip_ver=S01 \
-ro.mediatek.version.release=CPH1859_11_C.47_200215\
+ro.mediatek.version.release=CPH1859_11_C.48_200321\
 ro.mediatek.platform=MT6771 \
 ro.mediatek.version.branch=alps-mp-p0.mp3.tc16sp \
 ro.mediatek.wlan.p2p=1 \
@@ -33,23 +33,23 @@ ro.mediatek.wlan.wsc=1
 
 # Graphics
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-     ro.opengles.version=196610 \
-     debug.sf.disable_backpressure=1
-     	
+ro.opengles.version=196610 \
+debug.sf.disable_backpressure=1
+ 	
 # Telephony
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.telephony.default_network=10,10 \
-    ro.telephony.sim.count=2
+ro.telephony.default_network=10,10 \
+ro.telephony.sim.count=2
   
 # Playstore
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 ro.com.google.clientidbase=android-oppo
-     
+ 
 # DRM
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.mtk_cta_drm_support=1 \
-    ro.mtk_widevine_drm_l3_support=1 \
-    drm.service.enabled=true
+ro.mtk_cta_drm_support=1 \
+ro.mtk_widevine_drm_l3_support=1 \
+drm.service.enabled=true
 
 # Granular Volume Steps
 ro.config.vc_call_vol_steps=7
@@ -81,12 +81,6 @@ ril.read.imsi=1
 
 # WFD
 wfd.dummy.enable=1
-
-#Camera
-ro.vendor.camera3.zsl.default=140
-vendor.camera.mdp.cz.enable=1 
-vendor.camera.mdp.dre.enable=1
-vendor.camera.mdp.hfg.enable=0
 
 #WiFi
 mediatek.wlan.chip=CONSYS_MT6771
