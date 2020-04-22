@@ -12,7 +12,7 @@
 	bin/connsyslogger
 	bin/datafree
 	bin/em_svr	
-	bin/fsck_f2fs
+	bin/fsck.f2fs
 	bin/fsck_exfat
 	bin/ged_srv
 	bin/iozone
