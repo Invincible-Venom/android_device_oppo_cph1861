@@ -67,6 +67,8 @@
 	etc/init/terserver.rc
 	etc/permissions/org.ifaa.android.manager.permissions.xml
 	etc/permissions/org.simalliance.openmobileapi.xml
+	etc/permissions/android.hardware.telephony.cdma.xml
+	etc/permissions/android.hardware.telephony.gsm.xml
 	etc/a2dp_audio_policy_configuration.xml
 	etc/aee-config
 	etc/apns-version.xml
