@@ -17,4 +17,6 @@
 # This file is executed by build/envsetup.sh, and can use anything
 # defined in envsetup.sh.
 
-add_lunch_combo lineage_CPH1859-userdebug
+for var in eng user userdebug; do
+  add_lunch_combo lineage_CPH1859-$var
+done
