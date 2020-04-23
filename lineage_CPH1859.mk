@@ -1,6 +1,6 @@
 #
-# Copyright 2020 The Android Open Source Project
-# Copyright (C) 2020 The LineageOS Project
+# Copyright 2019 The Android Open Source Project
+# Copyright (C) 2019 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -28,15 +28,10 @@ $(call inherit-product, device/oppo/CPH1859/device.mk)
 # Define first api level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
-# Screen density
-PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
-
 # Bootanimation
 TARGET_SCREEN_WIDTH := 1080
 TARGET_SCREEN_HEIGHT := 2160
 
-## Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_CPH1859
 PRODUCT_DEVICE := CPH1859
 PRODUCT_MANUFACTURER := OPPO
@@ -51,6 +46,7 @@ TARGET_VENDOR_DEVICE_NAME := CPH1859
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE="CPH1859" \
     PRODUCT_NAME="CPH1859" \
-    PRIVATE_BUILD_DESC="full_oppo6771_17065-user 9 PPR1.180610.011 eng.root.20200321.060905 release-keys"
+    PRIVATE_BUILD_DESC="full_oppo6771_17065-user 9 PPR1.180610.011 eng.root.20200215.081652 release-keys"
 
-BUILD_FINGERPRINT := "OPPO/CPH1859/CPH1859:9/PPR1.180610.011/1583736408:user/release-keys"
+BUILD_FINGERPRINT := "OPPO/CPH1859/CPH1859:9/PPR1.180610.011/1579589611:user/release-keys"
+

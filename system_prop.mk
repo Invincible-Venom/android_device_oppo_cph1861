@@ -1,6 +1,6 @@
 #
-# Copyright 2020 The Android Open Source Project
-# Copyright (C) 2020 The LineageOS Project
+# Copyright 2019 The Android Open Source Project
+# Copyright (C) 2019 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -25,7 +25,7 @@ ro.sf.lcd_density=480
 # MediaTek
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 ro.mediatek.chip_ver=S01 \
-ro.mediatek.version.release=CPH1859_11_C.48_200321\
+ro.mediatek.version.release=CPH1859_11_C.47_200215\
 ro.mediatek.platform=MT6771 \
 ro.mediatek.version.branch=alps-mp-p0.mp3.tc16sp \
 ro.mediatek.wlan.p2p=1 \
@@ -33,23 +33,23 @@ ro.mediatek.wlan.wsc=1
 
 # Graphics
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-ro.opengles.version=196610 \
-debug.sf.disable_backpressure=1
- 	
+     ro.opengles.version=196610 \
+     debug.sf.disable_backpressure=1
+     	
 # Telephony
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-ro.telephony.default_network=10,10 \
-ro.telephony.sim.count=2
+    ro.telephony.default_network=10,10 \
+    ro.telephony.sim.count=2
   
 # Playstore
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 ro.com.google.clientidbase=android-oppo
- 
+     
 # DRM
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-ro.mtk_cta_drm_support=1 \
-ro.mtk_widevine_drm_l3_support=1 \
-drm.service.enabled=true
+    ro.mtk_cta_drm_support=1 \
+    ro.mtk_widevine_drm_l3_support=1 \
+    drm.service.enabled=true
 
 # Granular Volume Steps
 ro.config.vc_call_vol_steps=7
@@ -71,13 +71,6 @@ ro.sys.usb.storage.type=mtp,adb
 rild.libpath=mtk-ril.so
 rild.libargs=-d /dev/ttyC0
 vendor.ril.data.gsm_imsi0=405854004072403
-ril.read.imsi=1
-ro.vendor.mtk_ril_mode=c6m_1rild
-persist.vendor.radio.mtk_dsbp_support=1
-persist.vendor.radio.mtk_ps2_rat=L/W/G
-persist.vendor.radio.mtk_ps3_rat=G
-ro.vendor.md_auto_setup_ims=1
-ril.read.imsi=1
 
 # WFD
 wfd.dummy.enable=1
@@ -99,5 +92,5 @@ persist.service.debuggable=1 \
 persist.sys.usb.config=mtp,adb \
 ro.debuggable=1 \
 ro.allow.mock.location=1 \
-ro.adb.secure=0 \
+ro.adb.secure=0
 ro.secure=0

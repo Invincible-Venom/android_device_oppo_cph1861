@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2020 The Android Open Source Project
+# Copyright (C) 2019 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,6 +17,4 @@
 # This file is executed by build/envsetup.sh, and can use anything
 # defined in envsetup.sh.
 
-for var in eng user userdebug; do
-  add_lunch_combo lineage_CPH1859-$var
-done
+add_lunch_combo lineage_CPH1859-userdebug

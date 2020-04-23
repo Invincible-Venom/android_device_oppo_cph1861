@@ -1,5 +1,5 @@
 #!/bin/bash
-# Copyright (C) 2020 The LineageOS Project
+# Copyright (C) 2019 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -41,7 +41,7 @@ setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT"
 write_headers
 
 # The standard blobs
-write_makefiles "$MY_DIR"/proprietary-files.txt true
+write_makefiles "$MY_DIR"/Proprietary-files.txt true
 
 # We are done!
 write_footers
