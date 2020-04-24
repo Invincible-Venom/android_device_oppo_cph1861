@@ -1,6 +1,6 @@
 #
-# Copyright 2019 The Android Open Source Project
-# Copyright (C) 2019 The LineageOS Project
+# Copyright 2020 The Android Open Source Project
+# Copyright (C) 2020 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -87,7 +87,9 @@ PRODUCT_PACKAGES += \
 
 # HIDL
 PRODUCT_PACKAGES += \
+    android.hidl.base@1.0 \
     android.hidl.base@1.0_system \
+    android.hidl.manager@1.0 \
     android.hidl.manager@1.0_system
 
 # Power
@@ -121,6 +123,18 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.wifi.supplicant@2.1 \
     wpa_supplicant \
     wpa_supplicant.conf
+
+# Radio
+PRODUCT_PACKAGES += \
+    android.hardware.radio@1.2 \
+    android.hardware.radio.config@1.0 \
+    android.hardware.secure_element@1.0 \
+    libprotobuf-cpp-full \
+    libxml
+
+# VNDK-SP
+PRODUCT_PACKAGES += \
+    vndk-sp
 
 # Telephony
 PRODUCT_PACKAGES += \

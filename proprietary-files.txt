@@ -1,4 +1,4 @@
-    bin/aee
+        bin/aee
 	bin/aee_aed
 	bin/aee_aed64
 	bin/aee_archive

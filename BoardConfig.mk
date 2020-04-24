@@ -1,6 +1,6 @@
 #
-# Copyright 2019 The Android Open Source Project
-# Copyright (C) 2019 The LineageOS Project
+# Copyright 2020 The Android Open Source Project
+# Copyright (C) 2020 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -90,14 +90,35 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.mt6771
 # System Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system_prop.mk
 
-# VNDK
-BOARD_VNDK_VERSION := current
-
 # Vendor
 TARGET_COPY_OUT_VENDOR := vendor
 
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
 
-#DT2W
+# Sepolicy
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+
+# HIDL
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
+DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
+#DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/framework_compatibility_matrix.xml
+
+# VNDK
+BOARD_VNDK_VERSION := current
+#PRODUCT_EXTRA_VNDK_VERSIONS := 28
+BOARD_VNDK_RUNTIME_DISABLE := true
+
+# Dexpreopt
+ifeq ($(HOST_OS),linux)
+  ifneq ($(TARGET_BUILD_VARIANT),eng)
+    WITH_DEXPREOPT ?= true
+    WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY ?= true
+  endif
+endif
+
+#RIL
+ENABLE_VENDOR_RIL_SERVICE := true
+
+#DT2W :(flag may not be needed). DT2W isn't working yet.
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"

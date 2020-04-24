@@ -23,7 +23,6 @@ on init
     # We only need it to be overridden before things are mounted
     mount none /system/etc/fstab.mt6771 /vendor/etc/fstab.mt6771 bind
 
-
 service logger /system/bin/logcat -b all -D -f /cache/boot_log.txt
     class main
     user root
@@ -40,4 +39,16 @@ on property:sys.boot_completed=1
     # Stop the logger service
     stop logger
 
-write /sys/devices/platform/odm/odm:oppo_charger/power_supply/usb/otg_switch 1
+on boot
+
+    #OTG
+    write /sys/devices/platform/odm/odm:oppo_charger/power_supply/usb/otg_switch 1
+
+    #Brightness
+    chown system system /sys/class/leds/lcd-backlight/brightness
+    chmod 0664 /sys/class/leds/lcd-backlight/brightness
+    chmod 0444 /sys/class/leds/lcd-backlight/max_brightness
+
+    # Touchscreen
+    chown system system /proc/touchpanel/double_tap_enable
+    chmod 0660 /proc/touchpanel/double_tap_enable

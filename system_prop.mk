@@ -1,6 +1,6 @@
 #
-# Copyright 2019 The Android Open Source Project
-# Copyright (C) 2019 The LineageOS Project
+# Copyright 2020 The Android Open Source Project
+# Copyright (C) 2020 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -68,8 +68,9 @@ sys.ipo.pwrdncap=2
 ro.sys.usb.storage.type=mtp,adb	
 
 #ril
-rild.libpath=mtk-ril.so
-rild.libargs=-d /dev/ttyC0
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+rild.libpath=mtk-ril.so \
+rild.libargs=-d /dev/ttyC0 \
 vendor.ril.data.gsm_imsi0=405854004072403
 
 # WFD
