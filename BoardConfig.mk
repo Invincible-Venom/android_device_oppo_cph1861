@@ -23,6 +23,10 @@ BOARD_VENDOR := oppo
 # Assertions
 TARGET_OTA_ASSERT_DEVICE := CPH1859,CPH1861
 
+# Releasetools
+TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_oppo
+TARGET_RELEASETOOLS_EXTENSIONS := device/oppo/CPH1859
+
 # system-as-root
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 
