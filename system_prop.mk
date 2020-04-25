@@ -94,4 +94,4 @@ persist.sys.usb.config=mtp,adb \
 ro.debuggable=1 \
 ro.allow.mock.location=1 \
 ro.adb.secure=0 
-ro.secure=0
+ro.secure=1
