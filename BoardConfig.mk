@@ -23,10 +23,6 @@ BOARD_VENDOR := oppo
 # Assertions
 TARGET_OTA_ASSERT_DEVICE := CPH1859,CPH1861
 
-# Releasetools
-TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_oppo
-TARGET_RELEASETOOLS_EXTENSIONS := device/oppo/CPH1859
-
 # system-as-root
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 
@@ -124,5 +120,5 @@ endif
 #RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
-#DT2W :(flag may not be needed). DT2W isn't working yet.
+#DT2W
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
