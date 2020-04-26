@@ -69,6 +69,7 @@
 	etc/permissions/org.simalliance.openmobileapi.xml
 	etc/permissions/android.hardware.telephony.cdma.xml
 	etc/permissions/android.hardware.telephony.gsm.xml
+	etc/permissions/android.hardware.camera.xml
 	etc/a2dp_audio_policy_configuration.xml
 	etc/aee-config
 	etc/apns-version.xml
