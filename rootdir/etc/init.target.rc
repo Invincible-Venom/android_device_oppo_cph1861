@@ -1,0 +1,39 @@
+on init
+    # Force disable all VoLTE support -- it requires intensive modification of frameworks
+    # without framework support it creates all sorts of problems. Disable it.
+    # setprop persist.vendor.mtk.volte.enable 0
+    # setprop persist.vendor.mtk_ct_volte_support 0
+
+    # bind mount libmtk-ril.so
+    mount none /system/lib64/libmtk-ril.so /vendor/lib64/libmtk-ril.so bind
+
+    # bind mount power HAL
+    mount none /system/lib/hw/power.mt6771.so /vendor/lib/hw/power.mt6771.so bind
+
+service logger /system/bin/logcat -b all -D -f /cache/boot_log.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
+on post-fs-data
+    # Clear existing log and start the service
+    rm /cache/boot_log.txt
+    start logger
+
+on property:sys.boot_completed=1
+    # Stop the logger service
+    stop logger
+
+on boot
+    # DT2W
+    chown system system /proc/touchpanel/double_tap_enable
+    chown 0660 /proc/touchpanel/double_tap_enable
+
+    # OTG
+    write /sys/devices/platform/odm/odm:oppo_charger/power_supply/usb/otg_switch 1
+
+    #Brightness
+    chown system system /sys/class/leds/lcd-backlight/brightness
+    chmod 0664 /sys/class/leds/lcd-backlight/brightness

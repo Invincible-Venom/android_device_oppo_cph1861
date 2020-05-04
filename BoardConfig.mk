@@ -20,10 +20,15 @@ DEVICE_PATH := device/oppo/CPH1859
 
 BOARD_VENDOR := oppo
 
+# TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
+
 # Assertions
 TARGET_OTA_ASSERT_DEVICE := CPH1859,CPH1861
 
-# system-as-root
+# Bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
+
+# system-as-root aka SAR
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 
 # Platform
@@ -84,7 +89,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_SPARSE_EXT_DISABLED := false
 TARGET_USES_MKE2FS := true
 
-# fstab
+# Fstab
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.mt6771
 
 # System Properties
@@ -96,19 +101,32 @@ TARGET_COPY_OUT_VENDOR := vendor
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
 
-# Sepolicy
-BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+#Testing
+
+# Root
+#BOARD_ROOT_EXTRA_SYMLINKS += /mnt/vendor/persist:/persist
+
+# DT2W
+TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
+
+# Brightness
+BACKLIGHT_PATH := "/sys/class/leds/lcd-backlight/brightness"
 
 # HIDL
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
+DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/framework_manifest.xml
+
+#PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
+
+# Dex
+ifeq ($(HOST_OS),linux)
+  ifneq ($(TARGET_BUILD_VARIANT),eng)
+    WITH_DEXPREOPT ?= true
+    WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY ?= true
+  endif
+endif
 
 # VNDK
 BOARD_VNDK_VERSION := current
-BOARD_VNDK_RUNTIME_DISABLE := true
-
-#RIL
-ENABLE_VENDOR_RIL_SERVICE := true
-
-#DT2W
-TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
+#BOARD_VNDK_RUNTIME_DISABLE := true

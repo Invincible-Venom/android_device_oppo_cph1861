@@ -15,13 +15,18 @@
 # limitations under the License.
 #
 
+LOCAL_PATH := device/oppo/CPH1859
+
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default
-    
+
+# Audio policy configuration : Fix error in Android 10 by using below flag
+#USE_XML_AUDIO_POLICY_CONF := 1
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml
-    
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-impl \
@@ -35,7 +40,7 @@ PRODUCT_PACKAGES += \
     libhwc2on1adapter \
     libhwc2onfbadapter \
     memtrack.mt6771
-       
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 ifneq ($(findstring lineage, $(TARGET_PRODUCT)),)
@@ -51,23 +56,16 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/permissions/com.mediatek.ims.plugin.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.mediatek.ims.plugin.xml \
     $(LOCAL_PATH)/permissions/privapp-permissions-mediatek.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mediatek.xml
-    
+
 # Misc
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/misc/clatd.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/clatd.conf \
     $(LOCAL_PATH)/misc/factory.ini:$(TARGET_COPY_OUT_SYSTEM)/etc/factory.ini \
-    $(LOCAL_PATH)/misc/custom.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/custom.conf 
-    
-# Seccomp
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/seccomp/configstore@1.1.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/configstore@1.1.policy \
-    $(LOCAL_PATH)/seccomp/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
-    $(LOCAL_PATH)/seccomp/mediaextractor.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy 
-    
+    $(LOCAL_PATH)/misc/custom.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/custom.conf
+
 # Init
 PRODUCT_PACKAGES += \
     fstab.mt6771 \
-    init.mt6771.rc
+    init.target.rc
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -105,7 +103,7 @@ PRODUCT_PACKAGES += \
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.1-service-mediatek
-    
+
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
@@ -125,25 +123,17 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf
 
-# Radio
-PRODUCT_PACKAGES += \
-    android.hardware.radio@1.2 \
-    android.hardware.radio.config@1.0 \
-    android.hardware.secure_element@1.0 \
-    libprotobuf-cpp-full \
-    libxml
-
-# VNDK-SP
-PRODUCT_PACKAGES += \
-    vndk-sp
-
 # Telephony
 PRODUCT_PACKAGES += \
-    telephony-ext \
-    mtk-telephony-ext
+     mtk-telephony-ext
+#    telephony-ext \
 
-PRODUCT_BOOT_JARS += \
-    telephony-ext    
-        
+#PRODUCT_BOOT_JARS += \
+#    telephony-ext
+
+# Trust HAL
+PRODUCT_PACKAGES += \
+    lineage.trust@1.0-service
+
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/oppo/CPH1859/CPH1859-vendor.mk)

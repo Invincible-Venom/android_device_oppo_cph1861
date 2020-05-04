@@ -290,5 +290,11 @@
          to false.
     -->
      <bool name="config_enableNetworkLocationOverlay">true</bool>
+
+    <!-- Should the pinner service pin the Camera application? -->
+    <bool name="config_pinnerCameraApp">true</bool>
+
+    <!-- Should the pinner service pin the Home application? -->
+    <bool name="config_pinnerHomeApp">true</bool>
      
 </resources>
