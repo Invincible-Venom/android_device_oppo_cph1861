@@ -313,6 +313,7 @@
 	lib64/libwatchdog.so
 	lib64/libz.so
 	lib64/vendor.mediatek.hardware.radio@3.0.so
+	lib64/vendor.mediatek.hardware.radio@3.12.so
 	lib64/vendor.mediatek.hardware.camera.camdump@1.0.so
 	lib64/vendor.mediatek.hardware.lbs@1.0.so
 	lib64/vendor.mediatek.hardware.videotelephony@1.0.so
