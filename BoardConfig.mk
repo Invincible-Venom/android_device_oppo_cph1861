@@ -20,15 +20,13 @@ DEVICE_PATH := device/oppo/CPH1859
 
 BOARD_VENDOR := oppo
 
-# TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
-
 # Assertions
 TARGET_OTA_ASSERT_DEVICE := CPH1859,CPH1861
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 
-# system-as-root aka SAR
+# system-as-root
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 
 # Platform
@@ -101,8 +99,6 @@ TARGET_COPY_OUT_VENDOR := vendor
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
 
-#Testing
-
 # Root
 #BOARD_ROOT_EXTRA_SYMLINKS += /mnt/vendor/persist:/persist
 
@@ -118,14 +114,6 @@ DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/framework_manifest.xml
 
 #PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
-
-# Dex
-ifeq ($(HOST_OS),linux)
-  ifneq ($(TARGET_BUILD_VARIANT),eng)
-    WITH_DEXPREOPT ?= true
-    WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY ?= true
-  endif
-endif
 
 # VNDK
 BOARD_VNDK_VERSION := current
