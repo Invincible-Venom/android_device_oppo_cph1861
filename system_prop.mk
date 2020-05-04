@@ -108,4 +108,3 @@ dirac.path=/vendor/etc/dirac/17065
 persist.sys.oiface.enable=2
 persist.sys.hardcoder.name=oiface
 persist.sys.oiface.feature=oiface:1f,oifaceim:ffffffff
-
