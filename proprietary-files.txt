@@ -1,9 +1,4 @@
-	-app/SoterService/SoterService.apk
-	bin/iwpriv
-	framework/vendor.qti.hardware.soter-V1.0-java.jar
-	lib64/libaptXHD_encoder.so
-	lib64/libaptX_encoder.so
-	lib64/vendor.qti.hardware.soter@1.0.so
+	
 	bin/aee
 	bin/aee_aed
 	bin/aee_aed64
@@ -75,7 +70,6 @@
 	etc/permissions/org.simalliance.openmobileapi.xml
 	etc/permissions/android.hardware.telephony.cdma.xml
 	etc/permissions/android.hardware.telephony.gsm.xml
-	etc/permissions/android.hardware.camera.xml
 	etc/a2dp_audio_policy_configuration.xml
 	etc/aee-config
 	etc/apns-version.xml
