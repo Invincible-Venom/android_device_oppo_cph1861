@@ -99,8 +99,8 @@ TARGET_COPY_OUT_VENDOR := vendor
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
 
-# Root
-#BOARD_ROOT_EXTRA_SYMLINKS += /mnt/vendor/persist:/persist
+# Sepolicy
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # DT2W
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
@@ -113,8 +113,5 @@ DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/framework_manifest.xml
 
-#PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
-
 # VNDK
 BOARD_VNDK_VERSION := current
-#BOARD_VNDK_RUNTIME_DISABLE := true

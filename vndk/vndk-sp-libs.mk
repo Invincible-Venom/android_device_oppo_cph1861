@@ -13,8 +13,8 @@ VNDK_SP_LIBRARIES := \
 	libbacktrace.so \
 	libbase.so \
 	libbcinfo.so \
-        libblas.so \
-        libc++.so \
+    libblas.so \
+    libc++.so \
 	libcompiler_rt.so \
 	libcutils.so \
 	libhardware.so \

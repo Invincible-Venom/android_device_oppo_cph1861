@@ -21,9 +21,6 @@ LOCAL_PATH := device/oppo/CPH1859
 PRODUCT_PACKAGES += \
     audio.a2dp.default
 
-# Audio policy configuration : Fix error in Android 10 by using below flag
-#USE_XML_AUDIO_POLICY_CONF := 1
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml
 
@@ -34,12 +31,8 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
     android.hardware.graphics.mapper@2.0-impl \
-    gralloc.mt6771 \
-    gralloc.default \
-    hwcomposer.mt6771 \
     libhwc2on1adapter \
-    libhwc2onfbadapter \
-    memtrack.mt6771
+    libhwc2onfbadapter
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -54,7 +47,6 @@ PRODUCT_COPY_FILES += \
 
 # Permissions
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/permissions/com.mediatek.ims.plugin.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.mediatek.ims.plugin.xml \
     $(LOCAL_PATH)/permissions/privapp-permissions-mediatek.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mediatek.xml
 
 # Misc
@@ -91,10 +83,6 @@ PRODUCT_PACKAGES += \
     android.hidl.manager@1.0 \
     android.hidl.manager@1.0_system
 
-# Power
-PRODUCT_PACKAGES += \
-    power.mt6771
-
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-service \
@@ -107,8 +95,7 @@ PRODUCT_PACKAGES += \
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
-    android.hardware.thermal@1.0-service \
-    thermal.mt6771
+    android.hardware.thermal@1.0-service
 
 #WiFi
 PRODUCT_PACKAGES += \
@@ -123,13 +110,11 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf
 
-# Telephony
-PRODUCT_PACKAGES += \
-     mtk-telephony-ext
-#    telephony-ext \
-
-#PRODUCT_BOOT_JARS += \
-#    telephony-ext
+# Seccomp
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/seccomp/configstore@1.1.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/configstore@1.1.policy \
+    $(LOCAL_PATH)/seccomp/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
+    $(LOCAL_PATH)/seccomp/mediaextractor.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy
 
 # Trust HAL
 PRODUCT_PACKAGES += \
