@@ -1,5 +1,5 @@
     
-	bin/ged_srv 
+    bin/ged_srv 
     bin/kpoc_charger 
     bin/lcdc_screen_cap
     bin/netdiagbin/netdiag
